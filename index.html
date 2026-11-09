@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Carta de Navidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- La carta: textos y lista de deseos -->
+    <aside class="carta" id="carta">
+      <p class="carta__fecha" id="carta-fecha"></p>
+      <h1 class="carta__destinatario" id="carta-destinatario"></h1>
+      <p class="carta__introduccion" id="carta-introduccion"></p>
+      <ol class="deseos" id="lista-deseos"></ol>
+    </aside>
+
+    <!-- La mesa: donde está el puzzle -->
+    <main class="mesa">
+      <canvas id="lienzo-puzzle"></canvas>
+
+      <div class="controles">
+        <span class="controles__titulo" id="titulo-deseo"></span>
+        <span class="estado" id="estado"></span>
+      </div>
+
+      <div class="revelacion" id="revelacion">
+        <p class="revelacion__etiqueta" id="revelacion-etiqueta"></p>
+        <h2 class="revelacion__titulo" id="revelacion-titulo"></h2>
+        <p class="revelacion__mensaje" id="revelacion-mensaje"></p>
+        <div class="revelacion__botones">
+          <button class="boton" id="boton-ver">Ver imagen</button>
+          <button class="boton boton--principal" id="boton-siguiente">Siguiente deseo →</button>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- El orden importa: primero la configuración, al final la app -->
+  <script src="js/mi-carta.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/formas-piezas.js"></script>
+  <script src="js/imagenes.js"></script>
+  <script src="js/puzzle.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
